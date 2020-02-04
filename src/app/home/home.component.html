@@ -1,0 +1,30 @@
+<div class="container">
+  
+
+ <br/>
+
+
+  <header class="jumbotron" *ngIf="!isLoggedIn">
+  	<p> Please Log In/Sign up </p>
+   </header>
+
+
+
+   <div *ngIf="isLoggedIn"> 
+  
+   <div *ngFor="let post of allPosts">
+   		<div class="card w-75" style="margin:10px">
+  			<div class="card-body">
+    			<h5 class="card-title">{{ post.userId}}</h5>
+    			<p class="card-text">{{post.content}}</p>
+    			<a href="#" onclick="return false;" class="btn btn-primary">Like</a>
+
+  			</div>
+		</div>
+   </div>
+
+  </div>
+
+
+
+</div>
